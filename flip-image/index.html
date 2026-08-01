@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flip Image Online Free | RealLens</title>
+  <meta name="description" content="Mirror photos horizontally or vertically online for free with RealLens." />
+  <link rel="canonical" href="https://reallens.app/flip-image" />
+  <meta property="og:title" content="Flip Image Online Free | RealLens" />
+  <meta property="og:description" content="Mirror photos horizontally or vertically online for free with RealLens." />
+  <meta property="og:url" content="https://reallens.app/flip-image" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gifshot/0.3.2/gifshot.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="/" class="brand-title">Real<span>Lens</span></a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#pdf-tools" class="nav-link">PDF Tools</a></li>
+        <li><a href="/#image-tools" class="nav-link">Image Tools</a></li>
+        <li><a href="/#ai-tools" class="nav-link">AI Tools</a></li>
+        <li><a href="/#help-center" class="nav-link">Help Center</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div id="homePageView" style="display:none;"></div>
+    <div id="toolPageView"></div>
+    <div id="legalPageView" style="display:none;"></div>
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="category-badge image" id="modalBadge">IMAGE</span>
+          <h3 class="modal-title" id="modalTitle">Tool Workbench</h3>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Tool Modal">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="brand-title">Real<span>Lens</span></a>
+          <p style="font-size:0.875rem; margin-top:0.5rem; color:var(--color-text-muted);">
+            Free, fast, and secure browser-based file management utilities.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="/" class="footer-link">Home</a></li>
+              <li><a href="/#pdf-tools" class="footer-link">PDF Tools</a></li>
+              <li><a href="/#image-tools" class="footer-link">Image Tools</a></li>
+              <li><a href="/#ai-tools" class="footer-link">AI Tools</a></li>
+              <li><a href="/about" class="footer-link">About Us</a></li>
+              <li><a href="/#help-center" class="footer-link">Help Center</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="/privacy-policy" class="footer-link">Privacy Policy</a></li>
+              <li><a href="/terms-of-service" class="footer-link">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 RealLens. All rights reserved.</div>
+        <div>Designed for simplicity & speed.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

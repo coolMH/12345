@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RealLens - Free Online File Tools</title>
+  <meta name="description" content="Free online file tools to compress, convert, resize and manage PDFs and images quickly and easily. Includes AI Description Maker." />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Libraries for Client-Side PDF, Image, Document & AI Processing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.1/cropper.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gifshot/0.3.2/gifshot.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+  <!-- HEADER NAVIGATION -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="brand-title" id="home">Real<span>Lens</span></a>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#pdf-tools" class="nav-link">PDF Tools</a></li>
+        <li><a href="#image-tools" class="nav-link">Image Tools</a></li>
+        <li><a href="#ai-tools" class="nav-link">AI Tools</a></li>
+        <li><a href="#help-center" class="nav-link">Help Center</a></li>
+      </ul>
+    </div>
+  </header>  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HOME PAGE VIEW -->
+    <div id="homePageView">
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="hero-container">
+          <h1 class="hero-title">Free Online File Tools</h1>
+          <p class="hero-subtitle">Compress, convert, resize and manage your files quickly and easily.</p>
+          <a href="#tools" class="btn btn-primary btn-lg">Explore Tools</a>
+        </div>
+      </section>
+
+      <!-- SEARCH & CATEGORY FILTER BAR -->
+      <section class="search-filter-section" id="tools">
+        <div class="search-container">
+          <div class="search-box-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search tools (e.g. compress pdf, resize image, ai description, ai enhancer)..." />
+          </div>
+
+          <div class="category-pills">
+            <button class="category-pill active" data-category="all">All Tools</button>
+            <button class="category-pill" data-category="pdf">PDF Tools</button>
+            <button class="category-pill" data-category="image">Image Tools</button>
+            <button class="category-pill" data-category="ai">AI Tools</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOOLS GRID SECTION -->
+      <section class="tools-section">
+
+        <!-- PDF TOOLS BLOCK -->
+        <div class="category-block" id="pdfBlock">
+          <div class="category-header" id="pdf-tools">
+            <h2 class="category-title">
+              <span class="category-badge pdf">PDF</span>
+              PDF Tools
+            </h2>
+          </div>
+          <div class="tools-grid" id="pdfToolsGrid"></div>
+        </div>
+
+        <!-- IMAGE TOOLS BLOCK -->
+        <div class="category-block" id="imageBlock">
+          <div class="category-header" id="image-tools">
+            <h2 class="category-title">
+              <span class="category-badge image">IMAGE</span>
+              Image Tools
+            </h2>
+          </div>
+          <div class="tools-grid" id="imageToolsGrid"></div>
+        </div>
+
+        <!-- AI TOOLS BLOCK -->
+        <div class="category-block" id="aiBlock">
+          <div class="category-header" id="ai-tools">
+            <h2 class="category-title">
+              <span class="category-badge ai">AI</span>
+              AI Tools
+            </h2>
+          </div>
+          <div class="tools-grid" id="aiToolsGrid"></div>
+        </div>
+
+      </section>
+
+      <!-- FEATURES HIGHLIGHTS BAR -->
+      <section class="features-bar">
+        <div class="features-container">
+          <div class="feature-item">
+            <h3>⚡ Fast File Processing</h3>
+            <p>Processing happens 100% locally in your browser for instant speed and max privacy.</p>
+          </div>
+          <div class="feature-item">
+            <h3>🔒 Secure & Private</h3>
+            <p>Your documents and images never touch external servers or cloud databases.</p>
+          </div>
+          <div class="feature-item">
+            <h3>✨ AI Description Generator & Enhancer</h3>
+            <p>Generate high-quality product descriptions and enhance image resolution with browser AI.</p>
+          </div>
+          <div class="feature-item">
+            <h3>💯 100% Free Always</h3>
+            <p>No limits, no accounts required, no hidden fees or subscriptions.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HELP CENTER & CONTACT SECTION -->
+      <section class="help-section" id="help-center">
+        <h2 class="section-title">Help Center</h2>
+        <p class="section-subtitle">Frequently Asked Questions & Support</p>
+
+        <!-- FAQ ACCORDION -->
+        <div class="faq-container">
+          <div class="faq-item active">
+            <button class="faq-question" type="button">
+              How do I compress, convert, or enhance files on RealLens?
+              <span>▼</span>
+            </button>
+            <div class="faq-answer">
+              Simply select any tool card above, drop or browse your PDF or image file into the dropzone, configure your options (such as compression level, quality slider, or dimensions), and click process to download your result.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Are my files uploaded or stored on any server?
+              <span>▼</span>
+            </button>
+            <div class="faq-answer">
+              No! RealLens processes 100% of your files locally using browser client-side technologies (Canvas, WebAssembly, Web Workers, and JS File APIs). Your sensitive files stay on your device at all times.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              How do the AI tools work?
+              <span>▼</span>
+            </button>
+            <div class="faq-answer">
+              RealLens features client-side AI tools: the AI Description Generator creates structured, professional marketing copy from your text and images, while the AI Quality Enhancer sharpens, denoises, and enhances image details 100% in your browser.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              Is RealLens completely free to use?
+              <span>▼</span>
+            </button>
+            <div class="faq-answer">
+              Yes, RealLens is completely free with no usage limits, no login requirement, and no registration required.
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="contact-container">
+          <h3 style="font-size:1.25rem; font-weight:700; margin-bottom:1rem; text-align:center;">Contact Support</h3>
+          <form action="https://formsubmit.co/Nationserver.yt@gmail.com" method="POST" id="contactForm">
+            <input type="hidden" name="_subject" value="RealLens Contact Form Submission" />
+            <input type="hidden" name="_captcha" value="false" />
+            
+            <div class="form-row" style="margin-bottom:1rem;">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name</label>
+                <input type="text" id="contactName" name="name" class="form-control" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Your Email</label>
+                <input type="email" id="contactEmail" name="email" class="form-control" placeholder="name@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom:1rem;">
+              <label class="form-label" for="contactSubject">Subject</label>
+              <input type="text" id="contactSubject" name="subject" class="form-control" placeholder="How can we help?" required />
+            </div>
+
+            <div class="form-group" style="margin-bottom:1.25rem;">
+              <label class="form-label" for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" class="form-control" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <!-- DEDICATED MULTI-PAGE TOOL VIEW CONTAINER -->
+    <div id="toolPageView" style="display:none;"></div>
+    <!-- DEDICATED LEGAL PAGE VIEW CONTAINER -->
+    <div id="legalPageView" style="display:none;"></div>
+  </main>
+
+  <!-- INTERACTIVE TOOL WORKBENCH MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="category-badge pdf" id="modalBadge">PDF</span>
+          <h3 class="modal-title" id="modalTitle">Tool Workbench</h3>
+        </div>
+        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Tool Modal">×</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Workbench contents rendered dynamically via script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="brand-title">Real<span>Lens</span></a>
+          <p style="font-size:0.875rem; margin-top:0.5rem; color:var(--color-text-muted);">
+            Free, fast, and secure browser-based file management utilities.
+          </p>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="/" class="footer-link">Home</a></li>
+              <li><a href="/#pdf-tools" class="footer-link">PDF Tools</a></li>
+              <li><a href="/#image-tools" class="footer-link">Image Tools</a></li>
+              <li><a href="/#ai-tools" class="footer-link">AI Tools</a></li>
+              <li><a href="/about" class="footer-link">About Us</a></li>
+              <li><a href="/#help-center" class="footer-link">Help Center</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="/privacy-policy" class="footer-link">Privacy Policy</a></li>
+              <li><a href="/terms-of-service" class="footer-link">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 RealLens. All rights reserved.</div>
+        <div>Designed for simplicity & speed.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

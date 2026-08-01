@@ -1,0 +1,8 @@
+{
+  "name": "RealLens",
+  "description": "Free online file tools to compress, convert, resize, and manage PDFs, images, and AI image description generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
